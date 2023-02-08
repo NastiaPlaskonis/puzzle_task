@@ -10,11 +10,10 @@ def check_columns(board: list):
     for col in range(len(board[0])):
         curr_col_set = set()
         for line in range(len(board)):
-            if board[line][col] != "*":
+            if board[line][col] != "*" and board[line][col] != ' ':
                 if board[line][col] in curr_col_set:
                     return False
                 else:
                     curr_col_set.add(board[line][col])
 
     return True
-
