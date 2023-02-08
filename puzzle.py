@@ -1,4 +1,17 @@
 def check_colors(board):
+    '''
+    Checks colors.
+    >>> check_colors(["**** ****",\
+    "***1 ****",\
+    "**  3****",\
+    "* 4 1****",\
+    "     9 2 ",\
+    " 6  83  *",\
+    "3   1  **",\
+    "  8  2***",\
+    "  2  ****"])
+    True
+    '''
     s = 0
     lst_for_check = []
     for i in range(0,5):
@@ -18,3 +31,19 @@ def check_colors(board):
         lst_for_check = []
         s-=1
     return True
+
+def validate_board(board):
+    '''
+    Checks main function.
+    >>> >>> validate_board(["****7****",\
+"***17****",\
+"**  3****",\
+"* 4 1****",\
+"     9 2 ",\
+" 6  83  *",\
+"3   1  **",\
+"  8  2***",\
+"  2  ****"])
+    False
+    '''
+    return check_lines(board) and check_columns(board) and check_colors(board)
