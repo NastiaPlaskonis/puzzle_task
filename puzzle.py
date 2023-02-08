@@ -17,3 +17,4 @@ def check_columns(board: list):
                     curr_col_set.add(board[line][col])
 
     return True
+
